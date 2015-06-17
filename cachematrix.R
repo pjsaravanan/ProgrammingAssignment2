@@ -57,24 +57,24 @@ cacheSolve <- function(x, ...)
 	mtx
 }
 ## Tests Results
-## > rm(list=ls())							## Remove all objects
-## > source("cachematrix.R")				## Load Source
-## > a<-makeCacheMatrix(matrix(1:4,2,2))  	## Prepare Cache, Initial test with matrix
-## > cacheSolve(a)							## Calculation Success
+## > rm(list=ls())                      ## Remove all objects
+## > source("cachematrix.R")            ## Load Source
+## > a<-makeCacheMatrix(matrix(1:4,2,2))## Prepare Cache, test with matrix
+## > cacheSolve(a)                      ## Calculation Success
 ##    [,1] [,2]
 ## [1,]   -2  1.5
 ## [2,]    1 -0.5
-## > cacheSolve(a)							## Matrix exists, inverse fetched from cache - Success
+## > cacheSolve(a)                      ## Matrix exists, inverse from cache
 ## getting cached data
 ##    [,1] [,2]
 ## [1,]   -2  1.5
 ## [2,]    1 -0.5
-## > a$set(matrix(4:7,2,2))					## Change the value of matrix
-## > cacheSolve(a)							## Cache Cleared, Calculation sucess, Cache Updated
+## > a$set(matrix(4:7,2,2))             ## Change the value of matrix
+## > cacheSolve(a)                      ## Cache Cleared, Cache Updated
 ##    [,1] [,2]
 ## [1,] -3.5    3
 ## [2,]  2.5   -2
-## > cacheSolve(a)							## Matrix exists, inverse fetched from cache - Success
+## > cacheSolve(a)                      ## Matrix exists, inverse from cache
 ## getting cached data
 ##    [,1] [,2]
 ## [1,] -3.5    3
